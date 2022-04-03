@@ -5,7 +5,6 @@ import hello.advanced.trace.logtrace.LogTrace;
 import org.springframework.stereotype.Repository;
 
 @Repository
-//@RequiredArgsConstructor
 public class OrderRepositoryV5 {
 
     private final TraceTemplate template;

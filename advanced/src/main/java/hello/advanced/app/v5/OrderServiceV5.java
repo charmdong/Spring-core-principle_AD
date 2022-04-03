@@ -5,7 +5,6 @@ import hello.advanced.trace.logtrace.LogTrace;
 import org.springframework.stereotype.Service;
 
 @Service
-//@RequiredArgsConstructor
 public class OrderServiceV5 {
 
     private final OrderRepositoryV5 orderRepository;
