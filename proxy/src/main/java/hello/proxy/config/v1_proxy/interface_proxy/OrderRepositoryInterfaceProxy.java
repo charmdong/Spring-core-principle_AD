@@ -15,7 +15,6 @@ public class OrderRepositoryInterfaceProxy implements OrderRepositoryV1 {
 
     @Override
     public void save (String itemId) {
-
         TraceStatus status = null;
 
         try {
