@@ -48,5 +48,5 @@ public class AutoProxyConfig {
         LogTraceAdvice advice = new LogTraceAdvice(logTrace);
         return new DefaultPointcutAdvisor(pointcut, advice);
     }
-    
+
 }
