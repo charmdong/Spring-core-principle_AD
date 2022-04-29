@@ -87,4 +87,9 @@ public class ExecutionTest {
         pointcut.setExpression("execution(* *(String))");
         assertThat(pointcut.matches(helloMethod, MemberServiceImpl.class)).isTrue();
     }
+
+    @Test
+    void withinExact() {
+        pointcut.setExpression("within(hello.aop.member.MemberServiceImpl)");
+    }
 }
