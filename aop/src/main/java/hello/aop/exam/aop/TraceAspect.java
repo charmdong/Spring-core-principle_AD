@@ -12,6 +12,11 @@ public class TraceAspect {
     @Before("@annotation(hello.aop.exam.annotation.Trace)")
     public void doTrace(JoinPoint joinPoint) {
         Object[] args = joinPoint.getArgs();
-        log.info("[trace] {} args={}", joinPoint.getSignature(), args);
+
+        String declaringTypeName = joinPoint.getSignature().getDeclaringTypeName();
+        declaringTypeName = declaringTypeName.substring(declaringTypeName.lastIndexOf(".") + 1);
+        String name = joinPoint.getSignature().getName();
+
+        log.info("{} {}", declaringTypeName, name);
     }
 }
